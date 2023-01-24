@@ -1,0 +1,260 @@
+// Заголовки, загальні БЕМ блоки та інше...
+// [class*="__banner"] or .*__banner
+// [class*="__banner"] {
+//   position: relative;
+//   display: flex;
+//   align-items: flex-end;
+//   width: 100%;
+//   @include adaptiveValue("height", 400, 150);
+//   // background: url(../img/quote-banner.jpg);
+//   // background-size: cover;
+//   // background-repeat: no-repeat;
+//   // background-position: center center;
+//   // background-attachment: fixed;
+// }
+
+// .banner-title
+.banner-title {
+  @include adaptiveValue("margin-bottom", 50, 20);
+  @include adaptiveValue("font-size", 70, 30);
+  font-weight: 700;
+  line-height: math.div(70 , 50);
+  color: $whiteColor;
+  text-transform: none;
+  text-align: center;
+  transform: translate(0px, 120%);
+  opacity: 0;
+  
+  // .banner-title ._watcher-view - for animation
+  &._watcher-view {
+    opacity: 1;
+    transform: translate(0px, 0px);
+    transition: transform 0.8s, opacity 0.8s;
+  }
+}
+//=============================================
+// .title
+.title {
+  @include adaptiveValue("margin-bottom", 30, 20);
+  @include adaptiveValue("font-size", 50, 30);
+  font-weight: 700;
+  line-height: math.div(50 , 40);
+  color: $activeColor;
+  text-align: center;
+  text-transform: uppercase;
+  transform: translate(0px, 120%);
+  opacity: 0;
+
+  &::after {
+    position: absolute;
+    bottom: -25px;
+    left: calc(50% - (20% / 2));
+    content: '';
+    width: 20%;
+    height: 5px;
+    background: $activeColor;
+    transform: scale(0);
+    opacity: 0;
+  }
+  // .title ._watcher-view - for animation
+  &._watcher-view {
+    opacity: 1;
+    transform: translate(0px, 0px);
+    transition: transform 0.8s, opacity 0.8s;
+    transition-delay: 0.5s;
+
+    &::after {
+      opacity: 1;
+      transform-origin: center top;
+      transform: scale(1);
+      transition: transform 0.8s, opacity 0.8s;
+      transition-delay: 1s;
+    }
+  }
+}
+//=============================================
+// .sub-title
+.sub-title {
+  @include adaptiveValue("font-size", 28, 20);
+  font-weight: 700;
+  line-height: math.div(28, 15);
+  text-align: center;
+  text-transform: uppercase;
+}
+//=============================================
+// button
+.button {
+  padding: 15px;
+  border: $activeColor 2px solid;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: transform .5s, color .5s, background .5s;
+ 
+  &:hover {
+    background: $activeColor;
+    color: $whiteColor;
+    transform: scale(1.1);
+  }
+  &:active {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+}
+//=============================================
+// .item
+.item {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0px 0px 5px rgba(232, 51, 60, 0.8);
+  text-align: center;
+  background: rgba(232, 51, 60, 0.9);
+  @media (max-width: $mobile) {
+    max-width: 100%;
+  }
+  // .item__img
+  &__img {
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+    width: 100%;
+    max-width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    background: $whiteColor;
+    border: 10px solid rgba(232, 51, 60, 0.9);
+    border-radius: 50%;
+    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.8);
+    
+    // .item__img img
+    & img {
+      width: 80%;
+      height: 80%;
+    }
+  }
+  // .item__img span
+  & span {
+    font-size: 40px;
+    font-weight: 700;
+    color: black;
+    opacity: 0.8;
+  }
+  // .item (even)
+  &:nth-child(even) {
+    background: black;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
+
+    // .item__img (even)
+    & .item__img {
+      background: $activeColor;
+      border: 10px solid rgba(255, 255, 255, 0.8);
+    }
+    & span {
+      color: $whiteColor;
+    }
+  }
+  // .item__desc
+  &__desc {
+    margin-top: 50px;
+  }
+  // .item__text
+  &__text {
+    line-height: math.div(28, 17);
+    text-transform: uppercase;
+    color: $whiteColor;
+  }
+}
+//=============================================
+// .example-slide
+.example-slide {
+  position: relative;
+  margin-top: 30px;
+  padding: 20px 30px;
+  box-shadow: 0 0 15px rgba(77, 77, 77, 1);
+  border-radius: 20px;
+  
+  // .example-slide__wrapper
+  &__wrapper {
+    width: 100%;
+  }
+  // .example-slide__slide
+  &__slide {
+  }
+  // .example-slide__img
+  &__img {
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+//=============================================
+// .swiper
+// .swiper-button (navigation buttons)
+.swiper-button-prev,
+.swiper-button-next {
+  width: 60px !important;
+  height: 60px !important;
+  border-radius: 50%;
+  color: $whiteColor !important;
+  opacity: 0.4;
+  font-weight: 700;
+  background: rgb(232, 51, 60);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease, opacity 0.3s ease-in-out;
+  z-index: 1;
+
+  @media (max-width: $tablet) {
+    &::after {
+      --swiper-navigation-size: 36px
+    }
+    width: 50px !important;
+    height: 50px !important;
+  }
+
+  @media (max-width: $mobile) {
+    &::after {
+      --swiper-navigation-size: 30px
+    }
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    opacity: 0.8;
+    box-shadow: 0px 0px 5px rgba(232, 51, 60, 0.8);
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+}
+// .swiper-button-prev
+.swiper-button-prev {
+  left: -10px !important;
+}
+// .swiper-button-next
+.swiper-button-next {
+  right: -10px !important;
+}
+//=============================================
+// .popup
+// .popup__content
+.popup__content {
+  display: flex;
+  flex-direction: column;
+}
+// .popup__close
+.popup__close {
+  display: flex;
+  align-self: end;
+  font-size: 30px;
+  color: $activeColor;
+}
+//=============================================
