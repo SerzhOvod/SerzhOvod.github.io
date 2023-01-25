@@ -29,7 +29,7 @@
 	&__container {
 		display: grid;
 		grid-template-columns: rem(150) 1fr rem(250);
-		align-items: center;
+		
 		@media (max-width: em(1080)) {
 			grid-template-columns: auto 1fr auto;
 		}
@@ -63,6 +63,7 @@
 // .menu
 .menu {
 	padding: 0 rem(10);
+	align-self: center;
 	// .menu__icon
 	&__icon {
 	}
