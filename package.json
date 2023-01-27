@@ -1,4 +1,5 @@
 {
+	"homepage": "https://SerzhOvod.github.io/dynasty-renovation",
 	"name": "fls-start",
 	"version": "3.0.0",
 	"description": "Start template with Gulp and Webpack",
