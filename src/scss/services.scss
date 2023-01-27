@@ -13,11 +13,11 @@
     align-items: flex-end;
     width: 100%;
     @include adaptiveValue("height", 400, 150);
-    background: url(../img/services-banner.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: bottom center;
-    background-attachment: fixed;
+    background: center / cover no-repeat fixed url(../img/services-banner.jpg);
+    // background-size: cover;
+    // background-repeat: no-repeat;
+    // background-position: bottom center;
+    // background-attachment: fixed;
   }
   // .services__screen
   &__screen {
