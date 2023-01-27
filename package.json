@@ -1,5 +1,4 @@
 {
-	"homepage": "https://SerzhOvod.github.io/dynasty-renovation",
 	"name": "fls-start",
 	"version": "3.0.0",
 	"description": "Start template with Gulp and Webpack",
@@ -14,7 +13,7 @@
 		"sprite": "gulp sprite",
 		"fonts": "gulp fonts --rewrite",
 		"predeploy": "npm run build",
-		"deploy": "gh-pages -d build",
+		"deploy": "gh-pages -d dist",
 		"zip": "gulp deployZIP --build",
 		"devbuild": "gulp build --build --nowebp",
 		"tmp": "gulp -f gulpfile.tmp.js",
