@@ -114,18 +114,18 @@ class ScrollWatcher {
 	}
 	// Функція обробки базових дій точок спрацьовування
 	scrollWatcherIntersecting(entry, targetElement) {
-		if (entry.isIntersecting) {
-			// Бачимо об'єкт
-			// Додаємо клас
-			!targetElement.classList.contains('_watcher-view') ? targetElement.classList.add('_watcher-view') : null;
-			this.scrollWatcherLogging(`Я бачу ${targetElement.classList}, додав клас _watcher-view`);
-		} else {
-			// Не бачимо об'єкт
-			// Забираємо клас
-			targetElement.classList.contains('_watcher-view') ? targetElement.classList.remove('_watcher-view') : null;
-			this.scrollWatcherLogging(`Я не бачу ${targetElement.classList}, прибрав клас _watcher-view`);
+			if (entry.isIntersecting) {
+				// Бачимо об'єкт
+				// Додаємо клас
+				!targetElement.classList.contains('_watcher-view') ? targetElement.classList.add('_watcher-view') : null;
+				this.scrollWatcherLogging(`Я бачу ${targetElement.classList}, додав клас _watcher-view`);
+			} else {
+				// Не бачимо об'єкт
+				// Забираємо клас
+				targetElement.classList.contains('_watcher-view') ? targetElement.classList.remove('_watcher-view') : null;
+				this.scrollWatcherLogging(`Я не бачу ${targetElement.classList}, прибрав клас _watcher-view`);
+			}
 		}
-	}
 	// Функція відключення стеження за об'єктом
 	scrollWatcherOff(targetElement, observer) {
 		observer.unobserve(targetElement);

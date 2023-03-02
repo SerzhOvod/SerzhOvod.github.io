@@ -1,18 +1,3 @@
-// Заголовки, загальні БЕМ блоки та інше...
-// [class*="__banner"] or .*__banner
-// [class*="__banner"] {
-//   position: relative;
-//   display: flex;
-//   align-items: flex-end;
-//   width: 100%;
-//   @include adaptiveValue("height", 400, 150);
-//   // background: url(../img/quote-banner.jpg);
-//   // background-size: cover;
-//   // background-repeat: no-repeat;
-//   // background-position: center center;
-//   // background-attachment: fixed;
-// }
-
 // .banner-title
 .banner-title {
   @include adaptiveValue("margin-bottom", 50, 20);
@@ -24,6 +9,11 @@
   text-align: center;
   transform: translate(0px, 120%);
   opacity: 0;
+
+  @media (max-width: $mobile) {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
   
   // .banner-title ._watcher-view - for animation
   &._watcher-view {
@@ -44,6 +34,11 @@
   text-transform: uppercase;
   transform: translate(0px, 120%);
   opacity: 0;
+
+  @media (max-width: $mobile) {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
 
   &::after {
     position: absolute;
@@ -108,10 +103,12 @@
   position: relative;
   width: 100%;
   max-width: 320px;
+  display: flex;
   border-radius: 20px;
-  padding: 30px;
+  padding: 60px 30px;
   box-shadow: 0px 0px 5px rgba(232, 51, 60, 0.8);
   text-align: center;
+  align-items: center;
   background: rgba(232, 51, 60, 0.9);
   @media (max-width: $mobile) {
     max-width: 100%;
@@ -162,7 +159,7 @@
   }
   // .item__desc
   &__desc {
-    margin-top: 50px;
+    // margin-top: 50px;
   }
   // .item__text
   &__text {
@@ -175,7 +172,7 @@
 // .example-slide
 .example-slide {
   position: relative;
-  margin-top: 30px;
+  margin-top: 10px;
   padding: 20px 30px;
   box-shadow: 0 0 15px rgba(77, 77, 77, 1);
   border-radius: 20px;
@@ -183,9 +180,6 @@
   // .example-slide__wrapper
   &__wrapper {
     width: 100%;
-  }
-  // .example-slide__slide
-  &__slide {
   }
   // .example-slide__img
   &__img {

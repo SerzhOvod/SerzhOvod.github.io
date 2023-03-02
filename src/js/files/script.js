@@ -34,7 +34,10 @@ const activeActions = actions.forEach(action => {
 });
 // ==================================================================================================================
 
-
+// const viewportWidth = window.innerWidth;
+// if (viewportWidth <= 767.98) {
+//   document.documentElement.classList.remove('watcher');
+// }
 
 // Перевірка валідності форми відправки =============================================================================
 "use strict"

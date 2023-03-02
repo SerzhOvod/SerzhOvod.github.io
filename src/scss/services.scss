@@ -14,10 +14,6 @@
     width: 100%;
     @include adaptiveValue("height", 400, 150);
     background: center / cover no-repeat fixed url(../img/services-banner.jpg);
-    // background-size: cover;
-    // background-repeat: no-repeat;
-    // background-position: bottom center;
-    // background-attachment: fixed;
   }
   // .services__screen
   &__screen {
@@ -48,6 +44,11 @@
   &__service {
     opacity: 0;
     transform: translateX(-50%);
+
+    @media (max-width: $mobile) {
+      opacity: 1;
+      transform: translateX(0px);
+    }
     
     // .block__service ._watcher-view
     &._watcher-view {
@@ -61,6 +62,11 @@
   &__service:nth-child(even) {
     opacity: 0;
     transform: translateX(50%);
+
+    @media (max-width: $mobile) {
+      opacity: 1;
+      transform: translateX(0px);
+    }
     
     // .block__service (even) ._watcher-view
     &._watcher-view {

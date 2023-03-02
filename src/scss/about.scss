@@ -13,10 +13,6 @@
     width: 100%;
     @include adaptiveValue("height", 400, 150);
     background: center / cover no-repeat fixed url(../img/about-us-banner-1.jpg);
-    // background-size: cover;
-    // background-repeat: no-repeat;
-    // background-position: center center;
-    // background-attachment: fixed;
   }
   // .about__screen
   &__screen {
@@ -102,6 +98,8 @@
     
     @media (max-width: $mobile) {
       flex-direction: column;
+      opacity: 1;
+      transform: translateX(0px);
     }
     // .article__inner ._watcher-view (odd) - for animation
     &._watcher-view {
@@ -122,6 +120,8 @@
     
     @media (max-width: $mobile) {
       flex-direction: column;
+      opacity: 1;
+      transform: translateX(0px);
     }
     // .article__inner ._watcher-view (even) - for animation
     &._watcher-view {
@@ -146,9 +146,6 @@
     width: 100%;
     height: 100%;
     background: center / contain repeat url(../img/decor-5.png);
-    // background-position: center;
-    // background-repeat: repeat;
-    // background-size: contain;
     opacity: 0.15;
     z-index: -1;
     }
