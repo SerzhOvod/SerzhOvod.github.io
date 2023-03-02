@@ -64,9 +64,6 @@
 .menu {
 	padding: 0 rem(10);
 	align-self: center;
-	// .menu__icon
-	&__icon {
-	}
 	// .menu__body
 	&__body {
 		@media (max-width: $mobile) {
@@ -148,7 +145,7 @@
 		-moz-animation: fill 1s forwards;
 		opacity: 1;
 	}
-	@-webkit-keyframes fill {
+	@keyframes fill {
 		0% {
 			width: 0%;
 			height: 2px;
@@ -290,9 +287,6 @@
 		.menu-open & {
 			span {
 				width: 0;
-			}
-			&::before,
-			&::after {
 			}
 			&::before {
 				top: calc(50% - rem(1));

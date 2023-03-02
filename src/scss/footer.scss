@@ -23,6 +23,12 @@
       color: $activeColor;
     }
   }
+  // .footer__verification
+  &__verification {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+  }
   // .footer__contacts
   &__contacts {
     display: flex;
@@ -31,7 +37,7 @@
     gap: rem(30);
     @include adaptiveValue("font-size", 20, 16);
     color: $whiteColor;
-    margin-bottom: 50px;
+    margin: 50px 0;
 
     & span {
       font-size: 20px;
@@ -46,8 +52,7 @@
     }
   }
 }
-
-
+// .menu-footer
 .menu-footer {
   margin: 50px 0;
   // .menu-footer__list
@@ -123,7 +128,7 @@
 		-moz-animation: fill 1s forwards;
 		opacity: 1;
 	}
-  @-webkit-keyframes fill {
+  @keyframes fill {
 		0% {
 			width: 0%;
 			height: 2px;
@@ -138,4 +143,20 @@
 			background: $activeColor;
 		}
 	}
+}
+
+// .verif
+.verif {
+  //.verif__image
+  .verif__image {
+    max-width: 150px;
+    @include adaptiveValue("height", 150, 100);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  //.verif__img
+  .verif__img {
+    width: 100%;
+    height: 100%;
+  }
 }
