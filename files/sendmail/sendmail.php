@@ -24,7 +24,7 @@
 	//Від кого лист
 	$mail->setFrom('from@gmail.com', 'New customer'); // Вказати потрібний E-mail
 	//Кому відправити
-	$mail->addAddress('to@gmail.com'); // Вказати потрібний E-mail
+	$mail->addAddress('sergey.ovodenko@gmail.com'); // Вказати потрібний E-mail
 	//Тема листа
 	$mail->Subject = 'Customer\'s request';
 
