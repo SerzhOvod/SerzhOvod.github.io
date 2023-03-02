@@ -802,6 +802,24 @@ body::after {
   }
 }
 
+@keyframes fill {
+  0% {
+    width: 0%;
+    height: 2px;
+  }
+
+  50% {
+    width: 100%;
+    height: 2px;
+  }
+
+  100% {
+    width: 100%;
+    height: 100%;
+    background: #e8333c;
+  }
+}
+
 .active-page::before {
   position: absolute;
   bottom: 0;
@@ -943,6 +961,16 @@ body::after {
   color: #e8333c;
 }
 
+.footer__verification {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 50px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .footer__contacts {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -954,7 +982,7 @@ body::after {
           justify-content: center;
   gap: 1.875rem;
   color: #fff;
-  margin-bottom: 50px;
+  margin: 50px 0;
 }
 
 .footer__contacts span {
@@ -1040,7 +1068,7 @@ body::after {
   opacity: 1;
 }
 
-@-webkit-keyframes fill {
+@keyframes fill {
   0% {
     width: 0%;
     height: 2px;
@@ -1056,6 +1084,17 @@ body::after {
     height: 100%;
     background: #e8333c;
   }
+}
+
+.verif .verif__image {
+  max-width: 150px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.verif .verif__img {
+  width: 100%;
+  height: 100%;
 }
 
 .hero {
@@ -3308,6 +3347,10 @@ button.swiper-pagination-bullet {
     font-size: 1.25rem;
   }
 
+  .verif .verif__image {
+    height: 9.375rem;
+  }
+
   .hero__img {
     height: 43.75rem;
   }
@@ -3594,6 +3637,10 @@ button.swiper-pagination-bullet {
 
   .footer__contacts {
     font-size: 1rem;
+  }
+
+  .verif .verif__image {
+    height: 6.25rem;
   }
 
   .hero__img {
@@ -4393,6 +4440,18 @@ button.swiper-pagination-bullet {
 @supports not (font-size: clamp( 1rem , 0.9279279279rem  +  0.3603603604vw , 1.25rem )) {
     .footer__contacts {
       font-size: calc(1rem + 0.25 * (100vw - 20rem) / 69.375);
+    }
+}
+
+@supports (height: clamp( 6.25rem , 5.3490990991rem  +  4.5045045045vw , 9.375rem )) {
+    .verif .verif__image {
+      height: clamp( 6.25rem , 5.3490990991rem  +  4.5045045045vw , 9.375rem );
+    }
+}
+
+@supports not (height: clamp( 6.25rem , 5.3490990991rem  +  4.5045045045vw , 9.375rem )) {
+    .verif .verif__image {
+      height: calc(6.25rem + 3.125 * (100vw - 20rem) / 69.375);
     }
 }
 
