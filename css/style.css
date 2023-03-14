@@ -1137,7 +1137,6 @@ body::after {
 }
 
 .hero__container {
-  width: 100%;
   max-width: 800px;
 }
 
@@ -3358,6 +3357,10 @@ button.swiper-pagination-bullet {
     padding-top: 12.5rem;
   }
 
+  .hero__container {
+    margin-left: 12.5rem;
+  }
+
   .hero__title {
     padding-bottom: 4.375rem;
   }
@@ -3556,10 +3559,6 @@ button.swiper-pagination-bullet {
     width: 7.5rem;
   }
 
-  .hero__container {
-    margin-left: 12.5rem;
-  }
-
   .hero__title {
     font-size: 4.5rem;
   }
@@ -3648,6 +3647,10 @@ button.swiper-pagination-bullet {
 
   .hero__box {
     padding-top: 8.125rem;
+  }
+
+  .hero__container {
+    margin-left: 0.0000000625rem;
   }
 
   .hero__title {
@@ -3852,12 +3855,6 @@ button.swiper-pagination-bullet {
 
   .form__sub-title {
     line-height: 1.75rem;
-  }
-}
-
-@media (max-width: 89.375em) {
-  .hero__container {
-    margin: 0 auto;
   }
 }
 
@@ -4090,6 +4087,11 @@ button.swiper-pagination-bullet {
     margin: 0 auto;
   }
 
+  .hero__container {
+    width: 100%;
+    margin: 0 auto;
+  }
+
   .hero__title {
     text-align: center;
     opacity: 1;
@@ -4313,10 +4315,6 @@ button.swiper-pagination-bullet {
     width: 6.25rem;
   }
 
-  .hero__container {
-    margin-left: 0.0000000625rem;
-  }
-
   .hero__title {
     font-size: 1.5625rem;
   }
@@ -4474,6 +4472,18 @@ button.swiper-pagination-bullet {
 @supports not (padding-top: clamp( 8.125rem , 6.8637387387rem  +  6.3063063063vw , 12.5rem )) {
     .hero__box {
       padding-top: calc(8.125rem + 4.375 * (100vw - 20rem) / 69.375);
+    }
+}
+
+@supports (margin-left: clamp( 0.0000000625rem , -3.6036035231rem  +  18.0180179279vw , 12.5rem )) {
+    .hero__container {
+      margin-left: clamp( 0.0000000625rem , -3.6036035231rem  +  18.0180179279vw , 12.5rem );
+    }
+}
+
+@supports not (margin-left: clamp( 0.0000000625rem , -3.6036035231rem  +  18.0180179279vw , 12.5rem )) {
+    .hero__container {
+      margin-left: calc(0.0000000625rem + 12.4999999375 * (100vw - 20rem) / 69.375);
     }
 }
 
@@ -5064,18 +5074,6 @@ button.swiper-pagination-bullet {
 @supports not (width: clamp( 6.25rem , 6.2483702738rem  +  2.6075619296vw , 7.5rem )) {
     .header__logo {
       width: calc(6.25rem + 1.25 * (100vw - 0.0625rem) / 47.9375);
-    }
-}
-
-@supports (margin-left: clamp( 0.0000000625rem , -0.0162971995rem  +  26.0756191656vw , 12.5rem )) {
-    .hero__container {
-      margin-left: clamp( 0.0000000625rem , -0.0162971995rem  +  26.0756191656vw , 12.5rem );
-    }
-}
-
-@supports not (margin-left: clamp( 0.0000000625rem , -0.0162971995rem  +  26.0756191656vw , 12.5rem )) {
-    .hero__container {
-      margin-left: calc(0.0000000625rem + 12.4999999375 * (100vw - 0.0625rem) / 47.9375);
     }
 }
 
