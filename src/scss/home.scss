@@ -17,7 +17,7 @@
   &__img {
     background: center / cover no-repeat fixed url(../img/main.jpg);
     width: 100%;
-    @include adaptiveValue("height", 700, 550);
+    @include adaptiveValue('height', 700, 550);
   }
   // .hero__screen
   &__screen {
@@ -35,15 +35,15 @@
     left: 0;
     margin: 0 auto;
     width: 100%;
-    @include adaptiveValue("padding-top", 200, 130);
+    @include adaptiveValue('padding-top', 200, 130);
   }
   // .hero__container
   &__container {
     width: 100%;
     max-width: 800px;
-    @include adaptiveValue("margin-left", 200, 0, 1200, 768, 1);
+    @include adaptiveValue('margin-left', 200, 0, 1200, 768, 1);
     @media (max-width: $pc) {
-      width: 100%;
+      // width: 100%;
       margin: 0 auto;
     }
   }
@@ -51,15 +51,15 @@
   &__title {
     max-width: 550px;
     color: $whiteColor;
-    @include adaptiveValue("font-size", 72, 25, 1200, 768, 1);
-    @include adaptiveValue("padding-bottom", 70, 30);
-    @include adaptiveValue("padding-top", 0, 30);
+    @include adaptiveValue('font-size', 72, 25, 1200, 768, 1);
+    @include adaptiveValue('padding-bottom', 70, 30);
+    @include adaptiveValue('padding-top', 0, 30);
     transform: translate(0px, 120%);
     opacity: 0;
     word-spacing: 1rem;
     line-height: 1.2;
     font-weight: 700;
-  
+
     & span {
       color: $activeColor;
       text-shadow: 3px 3px 3px rgba(255, 255, 255, 0.8);
@@ -74,12 +74,12 @@
       margin: 0 auto;
     }
     @media (max-width: 360px) {
-      font-size: 40px;;
+      font-size: 40px;
     }
     &._watcher-view {
       opacity: 1;
       transform: translate(0px, 0px);
-      transition: transform .7s, opacity .7s;
+      transition: transform 0.7s, opacity 0.7s;
     }
   }
   // .hero__sub-title
@@ -89,9 +89,9 @@
     line-height: math.div(30, 20);
     transform: translate(0px, 150%);
     opacity: 0;
-    @include adaptiveValue("font-size", 28, 16, 1400, 992, 1);
-    @include adaptiveValue("padding-bottom", 20, 10);
-   
+    @include adaptiveValue('font-size', 28, 16, 1400, 992, 1);
+    @include adaptiveValue('padding-bottom', 20, 10);
+
     @media (max-width: $mobile) {
       text-align: center;
       opacity: 1;
@@ -114,9 +114,9 @@
     line-height: math.div(30, 20);
     transform: translate(0px, 110%);
     opacity: 0;
-    @include adaptiveValue("font-size", 28, 16, 1400, 992, 1);
-    @include adaptiveValue("padding-bottom", 20, 10);
-   
+    @include adaptiveValue('font-size', 28, 16, 1400, 992, 1);
+    @include adaptiveValue('padding-bottom', 20, 10);
+
     @media (max-width: $mobile) {
       text-align: center;
       opacity: 1;
@@ -137,18 +137,18 @@
 .expectation {
   // .expectation__wrapper
   &__wrapper {
-    @include adaptiveValue("padding-top", 100, 70);
-    @include adaptiveValue("padding-bottom", 50, 35);
+    @include adaptiveValue('padding-top', 100, 70);
+    @include adaptiveValue('padding-bottom', 50, 35);
     position: relative;
 
     &::before {
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 100%;
-    background: center / cover no-repeat url(../img/decor-4.png);
-    opacity: 0.7;
-    z-index: -1;
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      background: center / cover no-repeat url(../img/decor-4.png);
+      opacity: 0.7;
+      z-index: -1;
     }
   }
   // .expectation__desc
@@ -164,10 +164,10 @@
     column-gap: 80px;
     row-gap: 120px;
     justify-content: center;
-    
+
     @media (max-width: $mobile) {
-      @include adaptiveValue("margin-left", 50, 0);
-      @include adaptiveValue("margin-right", 50, 0);
+      @include adaptiveValue('margin-left', 50, 0);
+      @include adaptiveValue('margin-right', 50, 0);
     }
   }
 }
@@ -175,7 +175,7 @@
 // .expectation__item
 .expectation__item {
   opacity: 0;
-  
+
   &:nth-child(even) {
     transform: translateX(-50%);
 
@@ -205,14 +205,14 @@
 .feedback {
   // .feedback__wrapper
   &__wrapper {
-    @include adaptiveValue("padding-top", 50, 35);
-    @include adaptiveValue("padding-bottom", 100, 70);
+    @include adaptiveValue('padding-top', 50, 35);
+    @include adaptiveValue('padding-bottom', 100, 70);
   }
   // .feedback__inner
   &__inner {
     display: flex;
     gap: 30px;
-    @include adaptiveValue("margin-top", 70, 30);
+    @include adaptiveValue('margin-top', 70, 30);
 
     @media (max-width: $tablet) {
       flex-direction: column;
@@ -246,16 +246,16 @@
   }
   // .feedback__sub-title
   &__sub-title {
-    @include adaptiveValue("font-size", 35, 20);
+    @include adaptiveValue('font-size', 35, 20);
   }
   // .feedback__sub-title-text
   &__sub-title-text {
-    @include adaptiveValue("font-size", 35, 20);
+    @include adaptiveValue('font-size', 35, 20);
     text-transform: uppercase;
   }
   // .feedback span (active words)
   & span {
-    @include adaptiveValue("font-size", 50, 30);
+    @include adaptiveValue('font-size', 50, 30);
     font-weight: 700;
     color: $activeColor;
   }
@@ -275,12 +275,12 @@
     align-self: center;
     opacity: 0;
     transform: translateX(50%);
-  
+
     @media (max-width: $mobile) {
       opacity: 1;
       transform: translateX(0);
     }
-  
+
     @media (max-width: $tablet) {
       width: 90%;
     }
