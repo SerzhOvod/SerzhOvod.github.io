@@ -3857,7 +3857,6 @@ button.swiper-pagination-bullet {
 
 @media (max-width: 89.375em) {
   .hero__container {
-    width: 100%;
     margin: 0 auto;
   }
 }
