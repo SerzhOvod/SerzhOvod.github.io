@@ -44,6 +44,7 @@
     @include adaptiveValue('margin-left', 200, 0);
     @media (max-width: $mobile) {
       width: 100%;
+      margin-left: 0;
       margin: 0 auto;
     }
   }
