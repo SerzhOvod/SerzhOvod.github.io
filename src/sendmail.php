@@ -11,15 +11,15 @@ $mail->CharSet = 'UTF-8';
 $mail->setLanguage('en', 'phpmailer/language/');
 $mail->IsHTML(true);
 
-/*
+
 	$mail->isSMTP();                                            //Send using SMTP
-	$mail->Host       = 'smtp.example.com';                     //Set the SMTP server to send through
+	$mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
 	$mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-	$mail->Username   = 'user@example.com';                     //SMTP username
-	$mail->Password   = 'secret';                               //SMTP password
-	$mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
+	$mail->Username   = 'dynasty.renovat@gmail.com';                     //SMTP username
+	$mail->Password   = 'dynastyrenovation';                               //SMTP password
+	$mail->SMTPSecure = 'ssl';            //Enable implicit TLS encryption
 	$mail->Port       = 465;                 
-	*/
+	
 
 //Від кого лист
 $mail->setFrom('dynasty.renovat@gmail.com', 'New customer'); // Вказати потрібний E-mail
