@@ -1138,7 +1138,11 @@ body::after {
 
 .hero__container {
   width: 100%;
+}
+
+.hero__sub-container {
   max-width: 800px;
+  width: 100%;
 }
 
 .hero__title {
@@ -3358,10 +3362,6 @@ button.swiper-pagination-bullet {
     padding-top: 12.5rem;
   }
 
-  .hero__container {
-    margin-left: 12.5rem;
-  }
-
   .hero__title {
     padding-bottom: 4.375rem;
   }
@@ -3648,10 +3648,6 @@ button.swiper-pagination-bullet {
 
   .hero__box {
     padding-top: 8.125rem;
-  }
-
-  .hero__container {
-    margin-left: 0.0000000625rem;
   }
 
   .hero__title {
@@ -4091,7 +4087,11 @@ button.swiper-pagination-bullet {
   .hero__container {
     width: 100%;
     margin: 0 auto;
-    margin-left: 0;
+  }
+
+  .hero__sub-container {
+    width: 100%;
+    margin: 0 auto;
   }
 
   .hero__title {
@@ -4474,18 +4474,6 @@ button.swiper-pagination-bullet {
 @supports not (padding-top: clamp( 8.125rem , 6.8637387387rem  +  6.3063063063vw , 12.5rem )) {
     .hero__box {
       padding-top: calc(8.125rem + 4.375 * (100vw - 20rem) / 69.375);
-    }
-}
-
-@supports (margin-left: clamp( 0.0000000625rem , -3.6036035231rem  +  18.0180179279vw , 12.5rem )) {
-    .hero__container {
-      margin-left: clamp( 0.0000000625rem , -3.6036035231rem  +  18.0180179279vw , 12.5rem );
-    }
-}
-
-@supports not (margin-left: clamp( 0.0000000625rem , -3.6036035231rem  +  18.0180179279vw , 12.5rem )) {
-    .hero__container {
-      margin-left: calc(0.0000000625rem + 12.4999999375 * (100vw - 20rem) / 69.375);
     }
 }
 
