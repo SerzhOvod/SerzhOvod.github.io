@@ -24,7 +24,7 @@ $mail->IsHTML(true);
 //Від кого лист
 $mail->setFrom('dynasty.renovat@gmail.com', 'New customer'); // Вказати потрібний E-mail
 //Кому відправити
-$mail->addAddress('sergey.ovodenko@gmail.com'); // Вказати потрібний E-mail
+$mail->addAddress($_POST['email']); // Вказати потрібний E-mail
 //Тема листа
 $mail->Subject = 'Customer\'s request';
 
