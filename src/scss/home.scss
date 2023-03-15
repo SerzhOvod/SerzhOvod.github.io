@@ -40,12 +40,18 @@
   // .hero__container
   &__container {
     width: 100%;
-    max-width: 800px;
-    @include adaptiveValue('margin-left', 200, 0);
     @media (max-width: $mobile) {
       width: 100%;
       margin: 0 auto;
-      margin-left: 0;
+    }
+  }
+  // .hero__sub-container
+  &__sub-container {
+    max-width: 800px;
+    width: 100%;
+    @media (max-width: $mobile) {
+      width: 100%;
+      margin: 0 auto;
     }
   }
   // .hero__title
