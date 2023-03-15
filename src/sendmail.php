@@ -22,9 +22,9 @@ $mail->IsHTML(true);
 	*/
 
 //Від кого лист
-$mail->setFrom('dynas789@dynasty-renovation.ca', 'New customer'); // Вказати потрібний E-mail
+$mail->setFrom('dynasty.renovat@gmail.com', 'New customer'); // Вказати потрібний E-mail
 //Кому відправити
-$mail->addAddress('dynasty.renovat@gmail.com'); // Вказати потрібний E-mail
+$mail->addAddress('sergey.ovodenko@gmail.com'); // Вказати потрібний E-mail
 //Тема листа
 $mail->Subject = 'Customer\'s request';
 
@@ -35,7 +35,7 @@ if (trim(!empty($_POST['name']))) {
     $body .= '<p><strong>Name:</strong> ' . $_POST['name'] . '</p>';
 }
 if (trim(!empty($_POST['phone']))) {
-    $body .= '<p><strong>Phone:</strong> ' . $phone . '</p>';
+    $body .= '<p><strong>Phone:</strong> ' . $_POST['phone'] . '</p>';
 }
 if (trim(!empty($_POST['email']))) {
     $body .= '<p><strong>E-mail:</strong> ' . $_POST['email'] . '</p>';
