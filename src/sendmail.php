@@ -16,7 +16,7 @@ $mail->IsHTML(true);
 	$mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
 	$mail->SMTPAuth   = true;                                   //Enable SMTP authentication
 	$mail->Username   = 'dynasty.renovat@gmail.com';                     //SMTP username
-	$mail->Password   = 'dynastyrenovation';                               //SMTP password
+	$mail->Password   = 'zcdjkxyvfhvydhti';                               //SMTP password
 	$mail->SMTPSecure = 'ssl';            //Enable implicit TLS encryption
 	$mail->Port       = 465;                 
 	
