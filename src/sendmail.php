@@ -24,7 +24,7 @@ $mail->IsHTML(true);
 //Від кого лист
 $mail->setFrom('dynas789@dynasty-renovation.ca', 'New customer'); // Вказати потрібний E-mail
 //Кому відправити
-$mail->addAddress('dynasty.renovat@gmail.com'); // Вказати потрібний E-mail
+$mail->addAddress('dynastyrenovationltd@gmail.com'); // Вказати потрібний E-mail
 //Тема листа
 $mail->Subject = 'Customer\'s request';
 
