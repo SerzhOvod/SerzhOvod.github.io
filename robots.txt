@@ -1,0 +1,6 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://dynasty-renovation.ca/sitemap.xml
+Sitemap: https://www.dynasty-renovation.ca/sitemap.xml
+
